@@ -1,0 +1,105 @@
+---
+title: "Are NFTs ever ethical?"
+author: "Danielle Navarro"
+date: "7 Dec 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br><br>
+
+It is time I admitted it to myself. I engage in a behaviour that many consider socially irresponsible. Something that many consider frivolous, or worse, unethical. 
+
+[I sell NFTs](https://www.henext.xyz/djnavarro).  
+
+Yes I'm conflicted about it, but I do sell them. I'm trying my best to be socially responsible about it, and that's not always easy to do. I've been thinking about my responsibilities in this area, and thought it might be useful for me -- and maybe for others -- to be clear about the approach I take and why I'm trying to be cautious. Because I do have reservations about NFTs, and I don't think it is a good idea to uncritically adopt them. 
+
+This post is my attempt to put my own thoughts in order, and not surprisingly the place to start is with the biggest ethical concern I have around NFTs: the environmental cost.
+
+### The environmental problem
+
+It's common knowledge at this point, but it is worth saying again. The most widely used cryptocurrencies are an environmental nightmare. They construct a distributed ledger that can be used to authenticate a transaction by consensus in a permissionless system (which is kind of neat), but the way they secure transactions against attacks is computationally wasteful. The amount of energy consumed by the Bitcoin network is comparable to an industrial nation, and this energy expenditure translates (in some fashion) to carbon emissions. Bitcoin contributes to global warming in a pretty substantial way and as we're at the pointy end of a climate crisis, I cannot for the life of me see an ethical justification for Bitcoin. 
+
+To give a sense of how bad it is, you can take a look at [this paper](http://blockchain.cs.ucl.ac.uk/wp-content/uploads/2021/11/UCL_CBT_DPS_Q32021_updated-2.pdf) by Platt et al (2021). Table 6 of the paper notes that Bitcoin energy consumption is optimistically estimated to be about 360 kilowatt-hours per transaction, and pessimistically estimated at 3691 kilowatt-hours per transaction. To put this in context, a Visa card transaction (using VisaNet) is estimated to consume a mere 0.0036 kilowatt-hours. You can conduct millions of Visa transactions for the same energy expenditure required to complete a single Bitcoin transaction. Bitcoin is very bad.
+
+And unfortunately for digital artists, Ethereum -- the currency used for the vast majority of cryptoart -- is not much better. It's an order of magnitude better than Bitcoin (not certain how much to trust my [source](https://solana.com/news/solana-energy-usage-report-november-2021) for this, but I'm guessing it's approximately right), but that still means you can make hundreds of thousands of Visa transactions for the energy cost of a single Ethereum transaction. Okay sure, there are plans afoot to eventually switch Ethereum to a "proof of stake" technology that would make a huge difference (see below), but that's not a justification for using Ethereum *now*. Until things change Ethereum is very bad, and selling digital art via any platform that relies on Ethereum is a massively wasteful exercise. What sucks is that this includes everything sold on [Foundation](https://foundation.app) (the fanciest NFT marketplace I know of) and everything sold on [Open Sea](https://opensea.io/) (the largest NFT marketplace I know of). Yes, there are plans afoot to allow Open Sea to use Tezos (again, see below) rather than Ethereum, but again, that's not a justification for using Open Sea *now*. 
+
+**Summary**: Environmentally speaking, Ethereum is bad, Foundation is bad, and Open Sea is bad. I don't know how to justify a decision to use those platforms. So I don't use them. Not ever. I think they're awful.
+
+### Escaping the environmental cost
+
+Something that gets lost in public discussion of NFTs is that the problem I've just described doesn't affect all cryptocurrencies in the same way. Bitcoin and Ethereum both use a "proof of work" mechanism to secure a distributed ledger against attacks, and these mechanisms are computationally wasteful by design. It's inherent to the technology. In contrast, cryptocurrencies like Tezos and Solana use a "proof of stake" mechanism to solve the same problem and it is designed to be much more efficient.
+
+So how much more efficient is proof of stake? Effect sizes matter. I mean, Ethereum is "technically" more efficient than Bitcoin, but who cares? They're both spectacularly wasteful when compared to VisaNet. If a proof of stake currency like Tezos improves on Ethereum a little bit, that's nice but it would still be a huge problem. This matters to me because the [hic et nunc](https://hicetnunc.art) (HEN) marketplace -- the one that I rely on -- uses Tezos. The meaningful comparison here isn't between Tezos and Ethereum, it's between Tezos and VisaNet. To justify selling art on HEN, I'd want the emissions associated with Tezos transactions to be similar to (or lower than) the emissions associated with transactions on VisaNet.
+
+A little awkwardly, I don't know of any data that directly speaks to that question. The closest I know of is the Platt et al paper, but that measures energy usage rather than emissions, and those aren't quite the same thing. Nevertheless, it's still slightly reassuring to see that the numbers reported in that paper suggest that Tezos transactions have similar energy efficiency to VisaNet transactions. Using the optimistic estimate for Tezos gives a figure of 0.00036 kWh per transaction, suggesting that Tezos is slightly more efficient than VisaNet. The pessimistic estimate places Tezos at 0.010 kWh per transaction, suggesting it's slightly less efficient than online credit card transactions.  
+
+So while I don't know how much I trust these numbers -- and I reserve the right to change my mind and stop selling art on HEN if someone can show me that I'm wrong about this -- my reading of Platt et al is that the environmental implications to selling digital art using Tezos are modest. The devil is always in the detail for things like this, but as far as I can tell it's not actually much different to credit card transactions. This strikes me as an important point: there's no reason to think Tezos is an ideal technology (it really, really isn't), but it's not obviously worse than traditional online transactions. 
+
+Notably, I don't see anyone getting too worked up about the environmental ramifications of small businesses accepting payment via credit cards. I don't see anyone getting worked up over the environmental ramifications of everyday consumers using their credit cards dozens of times a day. When placed in that context it feels very strange -- and rather hypocritical -- to hold generative artists to a different standard. Unless I'm wrong in how I'm interpreting the numbers, accepting payment via Tezos (when the best alternative is a credit card) does not seem to be a moral or ethical issue.
+
+**Summary**: As much as anything is fine in 2021, I think Tezos and HEN are okay. However, if I'm wrong about the numbers I will reverse my judgment on this point and stop using them.
+
+### Another episode of "no good options" 
+
+Approaching this from a different point of view, it's worth asking what the practical alternatives to NFTs are. When I say "practical alternatives", I'm talking about something that someone like myself could plausibly do. Building a whole new technology to help artists get paid is simply beyond my skill set. Passing legislation to implement a universal basic income is beyond my power. Those are not "practical alternatives" in the sense I'm thinking of: they don't constitute an alternative business model for an individual artist. 
+
+There are other ways a generative artist can get paid, of course. I can sell prints. I can set up a patreon. I can take commissions. I can accept donations in support. These are all legitimate options, and people often ask me about them. All I can say in response is: yes, I tried. It wasn't financially viable. For example, in my entire art career I've made less than $1000 in commissions. I sell prints and other things on [society6](https://society6.com/djnavarro) too, but that's even less lucrative. Purchases are rare and the royalties are almost nonexistent. And as for [my patreon](https://www.patreon.com/djnavarro)... well, I have exactly five subscribers. So, while I've had quite a lot of success in using my art convincing people to [donate to charity](https://www.gofundme.com/f/data-science-art-to-support-a-womens-refuge) (and I'm utterly delighted by that!), that doesn't translate to any income for me. 
+
+What I'm trying to say here is that I've attempted to use all of these as ways to generate income from art, and taken together they add up to less than $100 per month (in Australian dollars). By way of contrast, this morning I posted one NFT on HEN and it sold for about $250 within 10 minutes. I don't make a lot of money from selling art on HEN (it's way below minimum wage if you consider the amount of time I spend making the art), but it's still far more than any other source. For me at least, it's the least bad option for selling art.  
+
+And honestly, this is the point where I get a tiny bit prickly. If an artist is selling NFTs for less than minimum wage, and using a marketplace where transactions are as energy efficient as using a credit card online, do you *really* have an environmental argument against their actions? Or are you simply punishing artists for trying to earn a living in a capitalist society?
+
+**Summary**: Artists have to pay rent too.
+
+### But cryptocurrencies are capitalist?
+
+Surviving in capitalism is not a lot of fun if you value kindness and fairness, and the capitalism inherent to the design of the NFT world is not hard to spot. The single most important identity that you have in that world is your wallet. Literally. Your identity is fundamentally tied to the thing that stores money. I find it vaguely distasteful. It's even more unsettling once you start digging a little deeper and looking at how the "distributed governance" model works for a proof of stake system: to oversimplify a little, an agents voting power (for the purpose of achieving consensus about the state of the blockchain) is determined by wealth. It's not a democratic system, it's a capitalist one. I am not a fan. 
+
+There are a couple of reasons why this isn't a dealbreaker for me. The obvious one is that this particular failing is not unique to cryptocurrency. Capitalism is built into so many parts of my world already, and opting out of capitalism entirely is not practical. I am not very fond of capitalism, but as I have not yet been appointed Queen of the World there's not a lot I can do to make it go away. More pointedly, let's be realistic: me choosing to opt out of Tezos will do nothing to undermine capitalism. Donating money from my day job to support people who do real activism and community building (which, yes, I absolutely do this) is a *much* more effective act of resistance than abstaining from an obscure cryptocurrency that on balance is neither good nor bad.
+
+The second reason is a little more personal: when it comes to voting rights on blockchain, I simply don't care very much. I've never encountered an argument that makes me think this is an important issue. The environmental issues? Important. The human rights of actual people? Important. Abstract voting rights on a cryptocurrency blockchain? Not very high on my list of priorities. Sorry. 
+
+I mean, here's the thing. I live in a world where my ostensibly "socialist" labour union is riddled with people who don't think I deserve human rights (literally: there is a massive fight going on about systemic transphobia in my union right now), where people tell me on a daily basis which bathrooms I'm allowed to use, where I get called delusional by strangers for trying to find a way to be comfortable in my skin. There are large swathes of the world I cannot visit because of laws targeting LGBT people. My rights to identity documents are a matter of public debate. My rights to my chosen name and form of address is controversial. My bodily autonomy is subject to an extremely complicated legislative regime with strict gatekeeping. There are parts of the world that require people like me to be sterilised. Perhaps I am simply old and jaded, but there is only a finite amount of energy I can expend trying to "fight the system". In this particular instance I just can't make myself get worked up over the fact that, yep, capitalist thing turns out to be capitalist. It is not surprising, and at this particular moment in my life and in human history it's not a hill I'm willing to die on.
+
+**Summary**: I don't think governance on blockchain is a pressing social justice issue.
+
+### Do NFTs have value?
+
+Another perspective to consider is whether or not an NFT "should" have any economic value at all. People (myself included) tend to puzzle over whether or not an NFT is a thing that can possibly carry value, and wonder if the whole thing is a scam. After all, the reasoning goes, aren't you just selling people a jpeg they can download for free? 
+
+It's an interesting question, but I don't think it's an ethical issue. After all, if you believe the figures in Platt et al (and if we assume that I'm interpreting the paper correctly!) you'd have to concede that digital artists posting on HEN aren't wasting energy, and we aren't scamming anyone either. The artwork is right there, and anyone can look at it for free. The art is on my [art website](https://art.djnavarro.net): all of it. It isn't a secret that **you do not need to pay to use my art**. I broadcast this fact very widely: all the art is released under a creative commons licence (and sometimes a public domain licence), so in most instances people can reuse my art for free. Hell, you can even sell products using my art if you want. The *only* thing I ask in return is that people acknowledge me as the creator of my own work. 
+
+When viewed from that perspective, it seems to me that artists posting on HEN aren't doing much wrong. The worst you can say is that they're trying to earn a living wage using the least terrible option available to them. It's not perfect, but it's very hard to lead a perfectly ethical life in the modern world. That was literally the core message of [The Good Place](https://en.wikipedia.org/wiki/The_Good_Place), right? Perhaps we can cut artists (at least those who are trying to do the right thing) a little slack. 
+
+That being said, if you are genuinely curious about why people might assign value to NFT ownership (I confess I was quite suspicious about it myself), I'd strongly recommend reading [The Work of Art in the Age of Mechanical Reproduction](https://en.wikipedia.org/wiki/The_Work_of_Art_in_the_Age_of_Mechanical_Reproduction) by Walter Benjamin. Despite being written in 1935, I found it amazingly helpful. The short version of it is that Benjamin talks about reproducible art accruing value via two mechanisms, cult and aura. In the NFT context, it's the "aura value" that an artwork accrues through perceived authenticity that is codified in the NFT metadata. The art itself is endlessly reproducible and is in no sense scarce (e.g., my art is entirely free). What is scarce is the token, which functions as a kind of artist signature. It confers a socially understood status: the owner of the NFT is a kind of patron of the piece, someone who has supported the creator of the work. This status, this aura, is the thing that is scarce. I can't do justice to the elegance of Benjamins work here, but suffice it to say if you ever find yourself making the "haha you're just selling a jpeg no wait its just the metadata" argument, you may find it beneficial to read some art theory. 
+
+**Summary**: You don't have to like or value NFTs, but personal tastes are not ethical critiques.
+
+### Postscript: The moral hazard
+
+A last argument -- one that just occurred to me this morning -- is the possibility of moral hazard. Perhaps there's a risk here that if I post art on HEN (or other Tezos-based markets) in a socially responsible way, the net effect is that I will encourage other artists to post art in an irresponsible way. If the consequence of my actions is that other people start posting art on Ethereum-based chains, then I've done a bad thing.
+
+Another way in which you could construe the moral hazard argument is to suggest that artists are encouraging investors to take financial risks that they shouldn't. Personally, I'm not even slightly bothered about taking money from wealthy investors. If rich people want to give me money for art, I'll gladly take it. The person I'm more concerned about is someone who is not wealthy, but has approached cryptoart as an investment option. Frankly, I think this is very unwise. To anyone who has started thinking in these terms, all I can say is this:
+
+**You should pay for art because you like the art and want to support the artist. You should not buy art -- in NFT form or any other form -- thinking it will increase in value. If you are thinking of art as an investment you are probably being scammed. The art world is full of predators. It always has been, and that has not changed.**
+
+All of that being said, and trying to step back a little, I think the entire premise of the "moral hazard" argument is a little unfair. I'm not morally responsible for the behaviour of other adult human beings, and I am not lying to or misleading anyone. They can make their own choices. Again, I'm not Queen of the World and I do not control other people's behaviour. 
+
+Still... I suppose I do have to acknowledge that there are respects in which people do follow my lead? (I've no idea why: I'm not a good person. I don't even have a "good person" sash). And if that is the case, maybe I do need to start being more vocal in arguing that generative artists should not engage with any system that relies on a proof-of-work mechanism. With that in mind, I'll start doing that right now. To other artists: I love you all, but maybe stay away from Ethereum, okay? We all know it's bad.
+
+
+### (Post-postscript: On shaming)
+
+Another thought came to my mind later, and it relates to shaming. 
+
+Yes I do believe that Ethereum is bad, and yes I believe that artists should divest from it until the day finally arrives that it switches to proof of stake. But I also feel uncomfortable about shaming people. We all make questionable choices in our lives, and we all make compromises. A good analogy, I think, might be dietary choices. I once attended a seminar presenting estimates of the emissions costs associated with different kinds of food (which is actually quite a hard problem to solve). There's a lot of uncertainty around the numbers but one thing that really popped out is that cattle and sheep farming is by far the biggest source of emissions. As far as I could tell, the simple act of giving up red meat would have a big impact on the emissions associated with my diet. I think that too is an ethical issue, and it's not qualitatively different to the proof-of-work/proof-of-stake issue. And... I've tried my best, honestly. It's something I've been working on for years. I'm trying to cut back, but I'm finding it hard. I say that as someone who has successfully overcome a drinking problem, quit smoking, and achieved a lot of other things that are traditionally considered hard. But I'm not having a lot of success in achieving my dietary goals.
+
+Do I deserve to be shamed for this? I mean, the truth is that I am making a questionable choice. I genuinely think I ought to do better, but right now I am finding it hard. What I notice, however, is that my vegan friends -- who I'm sure would all prefer me to do better on this front -- have all treated me with kindness. They know that I'm trying my best. They know that this is hard. They understand that everyone is fighting a hard battle. They could have chosen to shame me for my behaviour: they didn't. Yes, they are very clear about the fact that they think that dietary choice are (partially) an ethical decision, and they don't think my choice is the best one. But they do not shame me for my imperfections. 
+
+I feel the same way about artists who mint NFTs on Ethereum. I do think it's not the best choice, but I am fundamentally unwilling to shame people who are genuinely trying their best to be ethical human beings. So, while I have my own stance (I guess I'm "vegetarian but not vegan" in my "NFTs as diet" analogy????) and I have my reasons for taking that stance, I'm loathe to be judgmental about artists who don't make the same choices I do. Perhaps I do have some obligation to take a firmer stance. I don't know. What I do know is that I can't be that person. That's not me, sorry.
+
+<br><br>
